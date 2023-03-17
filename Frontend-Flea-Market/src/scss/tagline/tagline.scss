@@ -1,0 +1,21 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.tagline{
+
+    height: 120px;
+    background-image: url("../../build/img/logo/logo2.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+
+
+    @include m.tablet{
+        height: 250px;
+    }
+  
+}
+
+
+

@@ -1,0 +1,36 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+
+.search{
+
+    // @include m.tablet{   
+    //     max-width: 80%;
+    // }
+
+    // &__container-input{
+      
+    // }
+
+    &__container-button{
+       
+        a{
+            padding: 5px 15px ;  
+        }
+    }
+
+    &__container-filter{
+
+        a{
+          //  font-size: 30px;
+        }
+
+    }
+
+
+}
+
+
+

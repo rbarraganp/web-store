@@ -1,0 +1,127 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+.main-index{
+
+
+    a{
+        text-decoration: none;
+    }
+    
+    &__categories{
+
+
+
+        &__card{
+
+
+           // min-height: 230px;
+            min-width: 250px;
+            max-width:500px;
+            margin-bottom: 50px;
+
+            @include m.tablet{
+                min-height: 230px;
+                min-width: 400px;
+            }
+        }
+
+   
+    }
+
+    &__ad-card{
+
+  //  border: solid 1px red;
+
+    //max-width: 370px;
+
+        &__img{
+
+             overflow: hidden;
+             max-height: 285px;
+
+            img{
+                display: block;
+                max-width: 380px;                
+            }
+
+              @include m.tablet{   
+                
+             }
+
+        }
+
+        &__inf{
+
+            &__price-and-status{   
+                
+            }
+
+            &__localityAndLike{
+            
+            }
+
+            &__description{
+
+                height: 145px;
+            }
+            
+        }
+
+
+
+    }
+
+    &__details{
+      
+      .carousel-item{
+
+        max-height: 845px;
+      }
+
+    margin-bottom: 100px;
+    
+      &__inf{
+
+        &__right{
+          min-width: 100px;
+        }
+
+        &__left{
+        }
+      
+      }
+
+    }
+   
+   &__user-details{
+
+
+ 
+
+    margin-top: 500px;
+   
+     &__logo-user{
+    
+      img{
+         margin-top: -35%;
+      }
+      
+     } 
+   }
+
+
+   
+   
+   
+
+
+
+  
+
+}
+
+
+

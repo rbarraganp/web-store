@@ -1,0 +1,45 @@
+// Colores
+$primary:  #F39C12;
+$secondary :  #E5E7E9;
+$dark: #17202A;
+$info: #9d9d9d ;
+
+
+
+/** Tipografia **/
+$display-font-weight: 900;
+$headings-font-weight: 700;
+
+// sombras
+$box-shadow-lg:  0 1rem 1rem rgba(#000000, .155);
+
+// $display-font-sizes: (
+//   1: 3rem,
+//   2: 2.5rem,
+//   3: 2rem,
+//   4: 1.5rem,
+//   5: 1rem,
+//   6: 0.5rem
+// );
+
+         
+
+
+
+//$display-font-weight: 300;
+//$display-line-height: $headings-line-height;
+
+/** Nav Link */
+$nav-link-padding-x: 0;
+//$nav-link-color: $primary;
+//$nav-link-hover-color: darken($gris, 10%);
+
+/** Cards **/
+$card-border-color: transparent;
+
+
+// Importar Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+

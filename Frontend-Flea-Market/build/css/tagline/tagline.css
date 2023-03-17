@@ -1,0 +1,14 @@
+.tagline {
+  height: 120px;
+  background-image: url("../../build/img/logo/logo2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (min-width: 768px) {
+  .tagline {
+    height: 250px;
+  }
+}
+
+/*# sourceMappingURL=tagline.css.map */

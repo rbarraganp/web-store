@@ -1,0 +1,53 @@
+@use 'variables' as var;
+@use "sass:color";
+
+//Grid
+@mixin crear-grid($columns, $gap) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($columns, 1fr);
+    // grid-template-rows: repeat($rows, 1fr);
+}
+
+//Media queries
+@mixin mobile {
+    @media screen and (min-width: var.$small) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: var.$medium) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: var.$big) {
+        @content;
+    }
+}
+
+//Botones
+@mixin boton($color_back, $color_font) {
+    background-color: $color_back;
+    border: 0;
+    border-radius: 1rem;
+    color: $color_font;
+    display: block;
+    font-weight: 700;
+    padding: 1.2rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.scale($color_back, $lightness: -20%);
+    }
+
+    @include tablet {
+        width: auto;
+    }
+}

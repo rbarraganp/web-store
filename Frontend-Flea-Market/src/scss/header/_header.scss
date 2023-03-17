@@ -1,0 +1,51 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+.header{
+
+    &__login{
+
+          //  font-size: 15px;
+           //min-width: 300px;
+
+        &__iniciar-sesion{
+            padding: 5px;
+        }
+
+    }
+
+   
+    &__publicaciones{
+        
+       // font-size: 25px;
+        border-top: solid v.$info 4px;
+        border-bottom: solid v.$info 4px;
+       
+        @include m.tablet{
+            border: none;
+    
+        }
+
+
+        // &__mis-publicaciones{
+        //     min-width: 215px;
+        // }
+
+
+    }
+
+
+    // &__enlace-index, &__publicaciones,  &__login {
+    //     border: solid 1px red;
+    // }
+      
+
+    
+
+
+}
+
+
+

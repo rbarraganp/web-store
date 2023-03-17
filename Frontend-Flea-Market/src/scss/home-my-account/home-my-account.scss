@@ -1,0 +1,81 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+
+.nav-home{
+
+
+    &__links{
+
+        a{
+            text-decoration: none; 
+          
+        }
+    }
+}
+
+
+.main-home{
+
+
+
+    .input-group{
+
+        @include m.tablet{
+            width: 75%;
+        }
+
+        @include m.desktop{
+            width: 50%;
+        }
+
+    }
+
+ 
+     
+
+}
+// .footer{
+
+
+
+//     &__info{
+
+//        // min-width:245px ;
+//        // font-size: 15px;
+//         border-top: solid v.$info 4px;
+//         border-bottom: solid v.$info 4px;
+       
+//         @include m.tablet{
+//             border: none;
+//         }
+
+//             &__enlaces{
+
+//                 a{
+//                    // font-weight: bolder;
+//                     //text-decoration: none;
+//                 }
+                
+//             }
+
+
+//     }
+
+//     &__rrss{   
+//        // font-size: 40px;
+//     }
+
+//     &__app{
+
+//         &__logo{            
+//            img{
+            
+//             width: 180px;
+//            }
+//         }
+
+//     }
+// }

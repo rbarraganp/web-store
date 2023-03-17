@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="program" content="Visual Studio Code">
+    <meta name="copyright" content="https://www.wipo.int/copyright/es/">
+    <meta name="author" content="Rubén Jesús Barragán Pérez">
+    <meta name="page description" content="venta de articulos nuevos y de segunda mano">
+    <meta name="content" content="nuevo, segunda mano, averiado, usado, reparado, coches, ropa, moda, motor, casas,
+     cine, libros, informatica, portatiles, consola, videojugos">
+    
+    
+    <link rel="shortcut icon" href="build/img/logo/favicon-32x32.png" type="image/ico" />
+   
+    <link rel="stylesheet" href="build/css/index.css">
+
+    <script src="https://kit.fontawesome.com/5336712829.js" crossorigin="anonymous"></script>
+
+    <title>ElRastrillo</title>
+
+</head>
+
+
+<body>
+
+<!-- CONTENEDOR PRINCIPAL -->
+<div class="container-xl " >
+
+    
+        <!-- HEADER Fila -->
+        <header class="header row  d-flex flex-column flex-md-row justify-content-between  p-2  bg-secondary border-bottom border-primary   " >
+
+            
+            <!-- Header enlace index -->
+            <div class="header__enlace-index col-md-3   d-flex justify-content-center  ps-0  align-items-center">
+
+                <a class="link-primary  fs-1 fw-bolder text-decoration-none  "  href="index.html"  > <span class="link-dark">El</span>Rastrillo</a>
+            </div>
+
+       
+            <!-- Header publicaciones -->
+            <div class="header__publicaciones  col-md-5  d-flex justify-content-center justify-content-lg-end align-items-center  my-2 my-md-0 py-2 py-md-0  ">
+                
+                  <!-- Header icono lapiz -->
+                <a class="header__publicaciones__nueva-publicacion   text-decoration-none   link-primary fs-3" id="new-ad-link"  href="home.html?section=new-ad" >
+                    <i class="fa-solid fa-pen "></i>
+                </a>
+                
+                  <!-- Header enlace mis publicaciones -->
+                <a class="header__publicaciones__mis-publicaciones  link-dark  text-decoration-none fs-3 fw-bolder  me-5 me-md-2 me-lg-5    ms-2"  id="my-ads-link"  href="home.html?section=my-ads"  >Mis Publicaciones</a>
+
+
+                    <!-- Header mis likes -->
+                    <a class="header__mis-likes  text-decoration-none  link-danger fs-1"  id="my-likes-link" href="home.html?section=my-likes" >
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+
+            </div>
+
+
+            <!-- Header log in -->
+            <div class="header__login col-md-4  d-flex justify-content-center align-items-center justify-content-md-end  ">
+
+                <!-- header boton iniciar-sesion -->
+                <a class="header__login__link  text-decoration-none  link-primary  me-3 fs-5 fw-bold "  data-bs-toggle="modal" data-bs-target="#modal-log-in" id="login-link" href="" >iniciar sesión</a>
+
+                <!-- dropdown menu -->
+                <div class="btn-group  header__login__memu d-none " id="login-menu">
+                    <button type="button" class="btn fs-5 fw-bolder  dropdown-toggle  dropdown-toggle-split" id="login-menu-nick-user" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                
+                    <ul class="dropdown-menu btn fs-6 fw-bolder ">
+                      <li><a class="dropdown-item " href="home.html?section=my-account">Mi cuenta</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item " id="sign-off" href="#">Cerrar sesión</a></li>
+                    </ul>
+                  </div>
+
+    
+            </div>
+
+
+        
+        </header>
+
+
+        <!-- TAGLINE Fila -->
+        <section class="tagline row mx-auto my-2 px-0 my-md-4  d-flex justify-content-center align-items-center  ">
+        </section>
+       
+
+        <!--MAIN-->
+        <main class="main-index  row  d-flex flex-column justify-content-center align-items-center col-md-11 mb-5 p-0 mt-5 mx-auto  " id="main-index">
+
+
+            <div class="main-index__user-details  d-flex flex-column justify-content-center fs-6 shadow  mb-5 bg-body rounded" id="main-index__user-details">
+
+                <div class="main-index__user-details__logo-user  ms-2 align-self-start ">
+                    <img class="d-block  w-75 rounded-circle border border-2 border-top-0 border-secondary  " src="build/img/logo/user.png" alt="user">
+                </div>
+    
+    
+
+                <div  class="main-index__user_details__inf d-lg-flex justify-content-lg-between   my-3  mx-4" > 
+
+                    <div class="main-index__user_details__inf__top" >
+        
+                        <p class="fs-3 fw-bolder" id="nickUser"></p>
+                        <p id="nameUser" ></p>
+                        <a  class="link-dark" id="lastUpdateAd"></a>
+                        <p class="registration-date mt-3 ">Registrado <span id="dischargeDateUser"></span></p>
+        
+                    </div>
+        
+                    <div class="main-index__user_details__inf__bottom mt-4 mt-lg-5">
+
+                        <div class="whatsapp d-flex align-items-center">
+                            <i class="fab fa-whatsapp fs-1 fw-bolder text-black me-3  "></i>
+                            <p class="pt-2" id="phoneUser"></p>
+                            
+                        </div>
+
+                        <div class="email d-flex mt-3">
+                            <i class="far fa-envelope fs-1 fw-bolder me-3 "></i>
+                            <a  class="pt-2 link-dark" id="emailUser" href=""></a>
+                        </div>
+                        
+
+                    </div>
+
+                </div>
+    
+            </div>
+    
+       
+
+        </main>
+
+       
+       
+          <!-- FOOTER -->
+          <footer class="footer row  d-flex justify-content-around my-3  pt-4 pb-1 bg-secondary ">
+
+            <article class="footer__rrss  col-md-3 order-lg-1  d-flex  flex-row justify-content-center  align-items-center  mb-5  pt-3 pt-md-0">
+
+                <a class="link-dark p-2 fs-1" href="#"> <i class="fab fa-facebook"></i></a>
+                <a class="link-dark p-2 fs-1" href="#">  <i class="fab fa-instagram"></i></a>
+                <a class="link-dark p-2 fs-1" href="#"> <i class="fab fa-twitter"></i></a>
+                <a class="link-dark p-2 fs-1" href="#"> <i class="fab fa-twitch "></i></a>
+
+            </article>
+
+            <article class="footer__info col-md-3  order-lg-0  p-0  d-flex flex-column  align-items-center align-items-md-start justify-content-center py-3 py-md-0">
+
+                
+                <a class="link-primary  fs-1 fw-bolder text-decoration-none "  href="index.html"  > <span class="link-dark">El</span>Rastrillo</a>
+                
+                
+
+                <div class="footer__info__enlaces  d-flex flex-column">
+                    <a class="link-dark fs-6 fw-bolder text-decoration-none" href="#" >Trabaja con nosotros</a>
+                    <a class="link-dark fs-6 fw-bolder text-decoration-none" href="#" >Preguntas más frecuentes</a>
+                    <a class="link-dark fs-6 fw-bolder text-decoration-none" href="#" >Política de privacidad</a>
+                    <a class="link-dark fs-6 fw-bolder text-decoration-none" href="#" >Contacto</a>
+                </div>
+
+
+            </article>
+
+            <article class="footer__app   col-md-3 order-lg-2 p-0 d-flex flex-row  justify-content-center justify-content-md-end">
+
+                 <a href="#" class="footer__app__logo"><img src="build/img/logo/app.png" alt="app"></a> 
+
+            </article>
+
+
+
+
+         </footer>
+
+       
+</div>
+
+<!-- MODAL LOGIN -->
+<div class="modal fade  " id="modal-log-in" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl modal-dialog-centered  rounded" >
+        
+        
+        <div class="modal-content rounded">
+          
+            <div class="modal-body shadow p-3 ">
+                
+                 <!-- </form> -->
+                 <form action="index.html" id="form-login" class="needs-validation "  > 
+
+                    <div class="input-login  d-flex flex-column align-items-center">
+
+                        <!-- img form user -->
+                        <div class="main-index__user-details__logo-user d-flex justify-content-center mb-2">
+                            <img class="d-block  w-75 rounded-circle   " src="build/img/logo/user.png" alt="user">
+                        </div>
+
+                        <!-- email control -->
+                        <div class="input-group flex-nowrap mb-4">
+                            <span class="input-group-text" id="icon-email"><i class="far fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="form-login__email" placeholder="Correo" aria-label="email" 
+                            pattern="^\w+@\w+\.\w+"  title="El formato no es correcto"  placeholder required>
+                        </div>
+
+                        <!-- password control -->
+                        <div class="input-group flex-nowrap mb-2">
+                            <span class="input-group-text" id="icon-password"><i class="fas fa-key"></i></span>
+                            <input type="password" class="form-control" id="form-login__password"  aria-describedby="help-password" placeholder="contraseña" aria-label="password" 
+                            minlength="8" maxlength="15" title="La contraseña debe tener entre 8 y 15 caracteres" placeholder required>
+                        </div>
+
+                    </div>
+
+                    <span class="form-login__message  fs-6 text-danger" id="form-login__error"></span>
+
+                    <div class="input-buttom d-flex justify-content-around mt-4">
+
+                        <button class="btn btn-primary text-white" id="form-login__submit" type="submit">Iniciar Sesión</button>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" aria-label="Close" data-bs-target="#modal-check-in"> Regístrate</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+        </div>
+
+   
+
+    </div>
+</div>
+
+<!-- MODAL LOGIN -->
+<div class="modal fade  " id="modal-log-in" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl modal-dialog-centered  rounded" >
+        
+        
+        <div class="modal-content rounded">
+          
+            <div class="modal-body shadow p-3 ">
+                
+                 <!-- </form> -->
+                 <form action="index.html" id="form-login" class="needs-validation "  > 
+
+                    <div class="input-login  d-flex flex-column align-items-center">
+
+                        <!-- img form user -->
+                        <div class="main-index__user-details__logo-user d-flex justify-content-center mb-2">
+                            <img class="d-block  w-75 rounded-circle   " src="build/img/logo/user.png" alt="user">
+                        </div>
+
+                        <!-- email control -->
+                        <div class="input-group flex-nowrap mb-4">
+                            <span class="input-group-text" id="icon-email"><i class="far fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="form-login__email" placeholder="Correo" aria-label="email" 
+                            pattern="^\w+@\w+\.\w+"  title="El formato no es correcto"  placeholder required>
+                        </div>
+
+                        <!-- password control -->
+                        <div class="input-group flex-nowrap mb-2">
+                            <span class="input-group-text" id="icon-password"><i class="fas fa-key"></i></span>
+                            <input type="password" class="form-control" id="form-login__password"  aria-describedby="help-password" placeholder="contraseña" aria-label="password" 
+                            minlength="8" maxlength="15" title="La contraseña debe tener entre 8 y 15 caracteres" placeholder required>
+                        </div>
+
+                    </div>
+
+                    <span class="form-login__message  fs-6 text-danger" id="form-login__error"></span>
+
+                    <div class="input-buttom d-flex justify-content-around mt-4">
+
+                        <button class="btn btn-primary text-white" id="form-login__submit" type="submit">Iniciar Session</button>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" aria-label="Close" data-bs-target="#modal-check-in"> Registrate</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+        </div>
+
+   
+
+    </div>
+</div>
+
+<!-- MODAL CHECKIN -->
+<div class="modal fade  " id="modal-check-in" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen-xl modal-dialog-centered  rounded" >
+
+
+<div class="modal-content rounded">
+  
+    <div class="modal-body shadow p-3 ">
+        
+         <!-- </form> -->
+         <form action="index.html" id="form-checkin" class="needs-validation-checkin" > 
+
+            <div class="input-login  d-flex flex-column align-items-center">
+
+                <!-- img form user -->
+                <div class="main-index__user-details__logo-user d-flex justify-content-center mb-2">
+                    <img class="d-block  w-75 rounded-circle   " src="build/img/logo/user.png" alt="user">
+                </div>
+
+
+
+                 <!-- Nick control -->
+                <div class="input-group flex-nowrap mb-4">
+                        <span class="input-group-text" id="icon-nick"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" id="form-checkin__nick" placeholder="Nick" aria-label="nick" maxlength="20" tittle="Máximo 20 caracteres" placeholder required>
+                </div>
+
+
+
+                <!-- Name control -->
+                <div class="input-group flex-nowrap mb-4">
+                    <span class="input-group-text" id="icon-name"><i class="far fa-user"></i></span>
+                    <input type="text" class="form-control" id="form-checkin__name" placeholder="Nombre" aria-label="name"  maxlength="50" tittle="Máximo 50 caracteres" placeholder required>
+                </div>
+
+
+                 <!-- Phone control -->
+                 <div class="input-group flex-nowrap mb-4">
+                    <span class="input-group-text" id="id-phone"><i class="fa-solid fa-phone"></i></i></span>
+                    <input type="text" class="form-control" id="form-checkin__phone" placeholder="Móvil" aria-label="phone" pattern="^\d{9}$" title="Debe ser un número de 9 dígitos" placeholder required>
+                </div>
+
+    
+                <!-- email control -->
+                <div class="input-group flex-nowrap mb-4">
+                    <span class="input-group-text" id="icon-email"><i class="far fa-envelope"></i></span>
+                    <input type="email" class="form-control" id="form-checkin__email" placeholder="Correo" aria-label="email" pattern="^\w+@\w+\.\w+" 
+                    placeholder required>
+                </div>
+
+                <!-- password control -->
+                <div class="input-group flex-nowrap  mb-4">
+                    <span class="input-group-text" id="icon-password"><i class="fas fa-key"></i></span>
+                    <input type="password" class="form-control" id="form-checkin__password"  placeholder="contraseña" aria-label="password"
+                    minlength="8" maxlength="15" title="Debe tener de 8 a 15 caracteres. Alfanumérica. Al menos un caracter especiál."  placeholder required>  
+                </div>
+        
+
+                <!-- password2 control -->
+                <div class="input-group flex-nowrap mb-4">
+                  <span class="input-group-text" id="icon-password2"><i class="fas fa-key"></i></span>
+                  <input type="password" class="form-control" id="form-checkin__password2"  placeholder="contraseña" aria-label="password2" placeholder required>
+                </div>
+
+
+            </div>
+
+            <span class="form-login__message  fs-6 text-danger" id="form-checkin__error"></span>
+
+            <div class="input-buttom d-flex justify-content-center mt-4">
+
+                <button class="btn btn-primary text-white" id="form-checkin__submit" type="submit">Enviar</button>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<!-- SCRIPT -->
+<script src="js/function.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>

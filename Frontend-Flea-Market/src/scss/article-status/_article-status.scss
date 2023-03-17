@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+// @include m.tablet{
+//     border: none;
+//border-top: solid v.$info 4px;
+// }
+
+
+.article-status{
+
+    img{
+        max-width: 130px;
+    
+    }
+
+    article{
+        border: solid v.$info 3px;
+        border-radius: 10px;
+        background-color: v.$secondary;
+        //min-width: 440px;
+       // max-width: ;
+       min-height: 380px;
+
+       @include m.tablet{
+        
+         min-height: 250px;
+      //   border: solid 1px red;
+      }
+
+       @include m.desktop{
+        
+        min-height: 350px;
+        //border: solid 1px blue;
+      }
+
+    }
+
+
+   
+    
+}
