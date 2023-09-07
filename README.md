@@ -1,4 +1,4 @@
-# tfc-daw-proyect
+# Web Store
 Small app for buying / selling items. Developed with Spring Boot framework
 
 ![image](https://user-images.githubusercontent.com/83243993/225969180-68f46c6f-6408-4bb0-8b24-d1b9a11dae9f.png)
